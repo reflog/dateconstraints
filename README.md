@@ -33,7 +33,7 @@ import "time"
 func main(){
 
     date, _ := time.Parse(time.RFC3339, "2020-03-10T00:00:00Z")
-    c, _ := dateconstraints.NewConstraint("> 2020-03-01T00:00:00Z <= 2020-04-01T00:00:00Z")
+    c, _ := date_constraints.NewConstraint("> 2020-03-01T00:00:00Z <= 2020-04-01T00:00:00Z")
     if c.Check(&date) {
         // date is in range!
     }
@@ -48,7 +48,7 @@ against a constraint. When validation fails a slice of errors containing why a
 date didn't meet the constraint is returned. For example,
 
 ```go
-c, err := semver.NewConstraint("<= 2020-03-01T00:00:00Z, >= 2020-04-10T00:00:00Z")
+c, err := date_constraints.NewConstraint("<= 2020-03-01T00:00:00Z, >= 2020-04-10T00:00:00Z")
 if err != nil {
     // Handle constraint not being parseable.
 }
@@ -70,7 +70,7 @@ for _, m := range msgs {
 ## Install
 
 ```
-go get github.com/reflog/date-constraints
+go get github.com/reflog/dateconstraints
 ```
 
 ## Contributing
