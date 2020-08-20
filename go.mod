@@ -1,4 +1,4 @@
-module github.com/reflog/date-constraints
+module github.com/reflog/dateconstraints
 
 go 1.14
 
